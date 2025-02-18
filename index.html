@@ -7,9 +7,12 @@
   <h1>Hello World</h1>
   <h1 class="test">Skibidi</h1>
   <script>
-    let h1 = document.createElement("h1")
-    h1.textContent="Skibidi"
-    document.body.appendChild(h1)
+    const p = new URLSearchParams(window.location.search)
+    const a = p.get("a")
+    const b = p.get("b")
+    if (a && b) {
+      console.log(a+b)
+    }
   </script>
 </body>
 </html>
