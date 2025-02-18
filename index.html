@@ -11,7 +11,10 @@
     const a = p.get("a")
     const b = p.get("b")
     if (a && b) {
-      console.log(a+b)
+      console.log(Number(a)+Number(b))
+    }
+    else {
+      console.log("Missing Params")
     }
   </script>
 </body>
