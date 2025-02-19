@@ -40,7 +40,7 @@
         }
         for (let i = 0; i < 56; i=i+4) {
           console.log(i.toString()+" "+chars.length.toString())
-          chunks.push(chars.splice(i,4))
+          chunks.push(chars.splice(0,4))
         }
         console.log(chunks)
         let h1 = document.querySelector("h2.test")
