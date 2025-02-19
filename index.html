@@ -7,33 +7,29 @@
 <body>
   <h1>Hello World</h1>
   <h1 class="test"></h1>
-  <input type="text" class="dogs">
+  <input type="text" id="toMD5">
   <button onclick="dog()">Click Me</button>
   <script>
-    const p = new URLSearchParams(window.location.search)
-    const a = p.get("a")
-    let chars = []
-    let constants = []
-    for (let i = 0; i < 64; i++) {
-      constants.push(Math.floor(2**32*Math.abs(Math.sin(i+1))).toString(16))
-    }
-    if (a) {
-      for (let i = 0; i < a.length; i++) {
-        chars.push(a.charCodeAt(i).toString(16))
-      }
-      chars.push("80")
-      while (chars.length % 64 != 56) {
-        chars.push("00")
-      }
-      console.log(chars)
-    }
-    else {
-      console.log("No param")
-    }
-  </script>
-  <script>
     function dog() {
-      console.log(document.getElementsByClassName("dogs").value)
+      let a = document.getElementById("toMD5").value
+      let chars = []
+      let constants = []
+      for (let i = 0; i < 64; i++) {
+        constants.push(Math.floor(2**32*Math.abs(Math.sin(i+1))).toString(16))
+      }
+      if (a) {
+        for (let i = 0; i < a.length; i++) {
+          chars.push(a.charCodeAt(i).toString(16))
+        }
+        chars.push("80")
+        while (chars.length % 64 != 56) {
+          chars.push("00")
+        }
+        console.log(chars)
+      }
+      else {
+        console.log("No param")
+      }
     }
   </script>
 </body>
