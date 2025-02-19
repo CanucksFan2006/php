@@ -5,16 +5,14 @@
 </head>
 <body>
   <h1>Hello World</h1>
-  <h1 class="test">Skibidi</h1>
+  <h1 class="test"></h1>
   <script>
     const p = new URLSearchParams(window.location.search)
     const a = p.get("a")
-    const b = p.get("b")
-    if (a && b) {
-      console.log(Number(a)+Number(b))
-    }
-    else {
-      console.log("Missing Params")
+    if (a) {
+      for (i = 0; i < a.length; i++) {
+        console.log(a[i])
+      }
     }
   </script>
 </body>
