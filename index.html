@@ -7,6 +7,8 @@
 <body>
   <h1>Hello World</h1>
   <h1 class="test"></h1>
+  <input type="text" class="dogs">
+  <button onclick="dog()">Click Me</button>
   <script>
     const p = new URLSearchParams(window.location.search)
     const a = p.get("a")
@@ -27,6 +29,11 @@
     }
     else {
       console.log("No param")
+    }
+  </script>
+  <script>
+    function dog() {
+      console.log(document.getElementsByClassName("dogs"))
     }
   </script>
 </body>
