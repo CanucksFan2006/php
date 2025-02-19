@@ -110,7 +110,7 @@
       let g = 0
       for (let i = 0; i < final.length; i++) {
         if (0<=i%64<=15) {
-          f = ((b1&c1)|((~b1)&d1))&0xFFFFFFFF
+          f = (((b1&c1)>>>0|(((~b1)>>>0)&d1)>>>0)>>>0&0xFFFFFFFF)>>>0
           f = f >>> 0
           if (i == 0) {
             console.log(f)
