@@ -19,6 +19,9 @@
         chars.push(a.charCodeAt(i).toString(16))
       }
       chars.push("80")
+      while (chars.length % 64 != 56) {
+        chars.push("00")
+      }
       console.log(chars)
     }
     else {
