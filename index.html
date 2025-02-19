@@ -6,9 +6,9 @@
 </head>
 <body>
   <h1>Hello World</h1>
-  <h1 class="test"></h1>
   <input type="text" id="toMD5" placeholder="Enter text here...">
-  <button onclick="dog()">Convert to MD5</button>
+  <button onclick="dog()">Convert to MD5</button><br>
+  <h1 class="test"></h1>
   <script>
     function dog() {
       let a = document.getElementById("toMD5").value
@@ -27,7 +27,7 @@
         }
         console.log(chars)
         let h1 = document.querySelector("h1.test")
-        h1.value = "Finished " + a
+        h1.textContent = "Finished " + a
       }
       else {
         console.log("No value")
