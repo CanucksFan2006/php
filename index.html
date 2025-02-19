@@ -73,10 +73,10 @@
           r=0
         }
       }
-      a0=BigInt(0x67452301)
-      b0=BigInt(0xefcdab89)
-      c0=BigInt(0x98badcfe)
-      d0=BigInt(0x10325476)
+      a0=0x67452301
+      b0=0xefcdab89
+      c0=0x98badcfe
+      d0=0x10325476
       for (let i = 0; i < 4; i++) {
         shift.push(7) 
         shift.push(12) //5
@@ -105,7 +105,7 @@
       let b1 = b0
       let c1 = c0
       let dt = d0
-      let d1 = BigInt(0)
+      let d1 = 0
       let f = 0
       let g = 0
       for (let i = 0; i < final.length; i++) {
