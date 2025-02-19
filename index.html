@@ -55,9 +55,9 @@
           chunks.push(len_list[item])
         }
         for (let item = 0; item < 16; item++) {
+          let rlist = chunks[item].reverse()
           for (let x = 0; x < 4; x++) {
-            console.log(chunks[item].reverse())
-            final.push(chunks[item].reverse()[x])
+            final.push(rlist[x])
           }
         }
         console.log(final)
