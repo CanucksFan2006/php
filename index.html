@@ -110,6 +110,7 @@
       let f = 0
       let g = 0
       for (let i = 0; i < final.length; i++) {
+        console.log(a1.toString()+" "+b1.toString()+" "+c1.toString()+" "+dt.toString())
         if (0<=i%64 && i%64<=15) {
           f = (((((b1&c1)>>>0)|(((~b1)>>>0)&dt)>>>0)>>>0)&0xFFFFFFFF)>>>0
           f = f >>> 0
