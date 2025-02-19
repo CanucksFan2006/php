@@ -26,7 +26,11 @@
         while (chars.length % 64 != 56) {
           chars.push("00")
         }
-        tbl.push(a.length*8)
+        tbl.push((a.length*8).toString())
+        while (tbl.length != 8) {
+          tbl.push("00")
+        }
+        console.log(tbl)
         let h1 = document.querySelector("h2.test")
         h1.textContent = a
       }
