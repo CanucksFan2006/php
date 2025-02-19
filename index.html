@@ -106,7 +106,26 @@
       let c1 = c0
       let dt = d0
       let d1 = 0
-      console.log(chars)
+      let f = 0
+      let g = 0
+      for (let i = 0; i < final.length; i++) {
+        if (0<=i%64<=15) {
+          f = ((b&c)|((~b)&d))&0xFFFFFFFF
+          g = i%64
+        }
+        else if (16<=i%64<=31) {
+          f = ((d&b)|((~d)&c))&0xFFFFFFFF
+          g = ((5*(i%64))+1)%16
+        }
+        else if (32<=i%64<=47) {
+          f=(b^c^d)&0xFFFFFFFF
+          g=((3*(i%64))+5)%16
+        }
+        else if (48<=i%64<=63) {
+          f=(c^(b|(~d)))&0xFFFFFFFF
+          g=(7*(i%64))%16
+        }
+      }
       let h1 = document.querySelector("h2.test")
       h1.textContent = a
     }
