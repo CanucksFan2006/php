@@ -15,6 +15,7 @@
       let chars = []
       let constants = []
       let tbl = []
+      let chunks = []
       for (let i = 0; i < 64; i++) {
         constants.push(Math.floor(2**32*Math.abs(Math.sin(i+1))).toString(16))
       }
@@ -37,7 +38,10 @@
         for (item in tbl) {
           chars.push(tbl[item])
         }
-        console.log(chars)
+        for (let i = 0; i < (chars.length)-8; i=i+4) {
+          chunks.push(chars.splice(i,i+4))
+        }
+        console.log(chunks)
         let h1 = document.querySelector("h2.test")
         h1.textContent = a
       }
