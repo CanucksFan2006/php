@@ -19,6 +19,7 @@
       let len_chunks = []
       let len_list = []
       let final = []
+      let final2 = []
       for (let i = 0; i < 64; i++) {
         constants.push(Math.floor(2**32*Math.abs(Math.sin(i+1))).toString(16))
       }
@@ -60,7 +61,18 @@
             final.push(rlist[x])
           }
         }
-        console.log(final)
+       let n=''
+       let r=0
+       for (item in final) {
+        n+=final[item]
+        r+=1
+        if (r == 4) {
+          final2.push(n)
+          n==''
+          r=0
+        }
+       }
+       console.log(final2)
         let h1 = document.querySelector("h2.test")
         h1.textContent = a
       }
