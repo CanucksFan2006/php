@@ -119,14 +119,17 @@
         }
         else if (16<=i%64<=31) {
           f = ((d1&b1)|((~d1)&c1))&0xFFFFFFFF
+          f = f >>> 0
           g = ((5*(i%64))+1)%16
         }
         else if (32<=i%64<=47) {
           f=(b1^c1^d1)&0xFFFFFFFF
+          f = f >>> 0
           g=((3*(i%64))+5)%16
         }
         else if (48<=i%64<=63) {
           f=(c1^(b1|(~d1)))&0xFFFFFFFF
+          f = f >>> 0
           g=(7*(i%64))%16
         }
         g=g+(16*Math.floor(i,64))
