@@ -14,11 +14,11 @@
     for (let i = 0; i < 64; i++) {
       constants.push(Math.floor(2**32*Math.abs(Math.sin(i+1))).toString(16))
     }
-    console.log(constants[63])
     if (a) {
       for (let i = 0; i < a.length; i++) {
-        document.querySelector("h1.test").textContent+="A"
+        chars.push(a.charAt[i].toString(16))
       }
+      console.log(chars)
     }
     else {
       console.log("No param")
