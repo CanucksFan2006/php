@@ -146,7 +146,6 @@
         c1=b1
         b1=a1
         a1=d1
-        console.log(a1,b1,c1,dt)
         if (i>0 && i%64==63) {
           a0=(a1+a0)%2**32
           b0=(b1+b0)%2**32
@@ -174,7 +173,6 @@
       while (d0.length != 8) {
         d0="0"+d0
       }
-      console.log(a0,b0,c0,d0)
       for (let i = 0; i < a0.length*4; i+=2) {
         if (i < 8) {
           md5list.push(a0.slice(i,i+2))
