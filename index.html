@@ -26,7 +26,8 @@
           chars.push("00")
         }
         console.log(chars)
-        document.querySelector("h1.test").value = "Finished " + a
+        let h1 = document.querySelector("h1.test")
+        h1.value = "Finished " + a
       }
       else {
         console.log("No value")
