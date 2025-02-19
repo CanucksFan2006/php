@@ -40,14 +40,13 @@
           chars.push(tbl[item])
         }
         for (let i = 0; i < 56; i=i+4) {
-          console.log(i.toString()+" "+chars.length.toString())
           chunks.push(chars.splice(0,4))
         }
         for (let i = 0; i < 8; i=i+8) {
           len_chunks.push(chars.splice(0,8))
         }
         console.log(len_chunks)
-        
+
 
         let h1 = document.querySelector("h2.test")
         h1.textContent = a
