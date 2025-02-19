@@ -28,7 +28,7 @@
         }
         tbl.push((a.length*8).toString())
         while (tbl.length != 8) {
-          tbl.push("00")
+          tbl.splice(0,0,"00")
         }
         console.log(tbl)
         let h1 = document.querySelector("h2.test")
