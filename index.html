@@ -138,9 +138,9 @@
         while (a1.length != 32) {
           a1="0"+a1
         }
-        console.log(a1)
         a1 = a1.slice(2+shift[i%64])+a1.slice(2,2+shift[i%64])
         a1 = Number("0b"+a1)
+        console.log(a1)
         a1 = (a1 + b1)%(2**32)
         d1=dt
         dt=c1
