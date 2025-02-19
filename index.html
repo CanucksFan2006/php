@@ -179,16 +179,16 @@
       }
       for (let i = 0; i < a0.length*4; i+=2) {
         if (i < 8) {
-          md5list.push(a0.splice(0,2))
+          md5list.push(a0.slice(0,2))
         }
         if (6 < i < 16) {
-          md5list.push(b0.splice(0,2))
+          md5list.push(b0.slice(0,2))
         }
         if (14 < i < 24) {
-          md5list.push(c0.splice(0,2))
+          md5list.push(c0.slice(0,2))
         }
         if (22 < i < 32) {
-          md5list.push(d0.splice(0,2))
+          md5list.push(d0.slice(0,2))
         }
       }
       let md5 = ''
