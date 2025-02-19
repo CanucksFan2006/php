@@ -38,9 +38,8 @@
         for (item in tbl) {
           chars.push(tbl[item])
         }
-        console.log(chars.length)
         for (let i = 0; i < (chars.length)-8; i=i+4) {
-          chunks.push(chars.splice(i,i+4))
+          chunks.push(chars.splice(i,4))
         }
         console.log(chunks)
         let h1 = document.querySelector("h2.test")
