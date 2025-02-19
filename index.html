@@ -111,6 +111,9 @@
       for (let i = 0; i < final.length; i++) {
         if (0<=i%64<=15) {
           f = ((b1&c1)|((~b1)&d1))&0xFFFFFFFF
+          if (i == 0) {
+            console.log(f)
+          }
           g = i%64
         }
         else if (16<=i%64<=31) {
