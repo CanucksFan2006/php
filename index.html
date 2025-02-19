@@ -50,7 +50,10 @@
         for (let i = 0; i < 8; i=i+4) {
           len_list.push(len_chunks.splice(0,4))
         }
-        console.log(len_list)
+        for (item in len_list) {
+          chunks.push(len_list[item])
+        }
+        console.log(chunks)
         let h1 = document.querySelector("h2.test")
         h1.textContent = a
       }
