@@ -17,6 +17,7 @@
       let tbl = []
       let chunks = []
       let len_chunks = []
+      let len_list = []
       for (let i = 0; i < 64; i++) {
         constants.push(Math.floor(2**32*Math.abs(Math.sin(i+1))).toString(16))
       }
@@ -45,9 +46,11 @@
         for (let i = 0; i < 8; i=i+8) {
           len_chunks.push(chars.splice(0,8))
         }
-        console.log(len_chunks)
-
-
+        len_chunks=len_chunks[0].reverse()
+        for (let i = 0; i < 8; i=i+4) {
+          len_list.push(len_chunks.splice(i,4))
+        }
+        console.log(len_list)
         let h1 = document.querySelector("h2.test")
         h1.textContent = a
       }
