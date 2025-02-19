@@ -179,13 +179,13 @@
         if (i < 8) {
           md5list.push(a0.slice(i,i+2))
         }
-        if (6 < i < 16) {
+        if (6 < i && i < 16) {
           md5list.push(b0.slice(i-8,i-6))
         }
-        if (14 < i < 24) {
+        if (14 < i && i < 24) {
           md5list.push(c0.slice(i-16,i-14))
         }
-        if (22 < i < 32) {
+        if (22 < i && i < 32) {
           md5list.push(d0.slice(i-24,i-22))
         }
       }
