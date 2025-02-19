@@ -9,9 +9,10 @@
   <script>
     const p = new URLSearchParams(window.location.search)
     const a = p.get("a")
+    let chars = []
     if (a) {
-      for (i = 0; i < a.length; i++) {
-        document.querySelector("h1.test").textContent+="A"
+      for (let i = 0; i < a.length; i++) {
+        document.querySelector("h1.test").textContent+=
       }
     }
     else {
