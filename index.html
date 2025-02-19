@@ -18,6 +18,7 @@
       let chunks = []
       let len_chunks = []
       let len_list = []
+      let final = []
       for (let i = 0; i < 64; i++) {
         constants.push(Math.floor(2**32*Math.abs(Math.sin(i+1))).toString(16))
       }
@@ -52,6 +53,11 @@
         }
         for (item in len_list) {
           chunks.push(len_list[item])
+        }
+        for (item in chunks) {
+          for (x in chunks[item].reverse()) {
+            final.push(chunks[items].reverse()[x])
+          }
         }
         console.log(chunks)
         let h1 = document.querySelector("h2.test")
