@@ -26,9 +26,13 @@
         while (chars.length % 64 != 56) {
           chars.push("00")
         }
-        tbl.push((a.length*8).toString())
-        while (tbl.length != 8) {
-          tbl.splice(0,0,"00")
+        let length_string = (a.length*8).toString()
+        while (length_string != 16)
+        {
+          length_string = "0" + length_string
+        }
+        for (let x = 0; x < 16; x+=2) {
+          tbl.push(length_string.slice(x,x+2))
         }
         console.log(tbl)
         let h1 = document.querySelector("h2.test")
