@@ -10,9 +10,14 @@
     const p = new URLSearchParams(window.location.search)
     const a = p.get("a")
     let chars = []
+    let constants = []
+    for (let i = 0; i < 64; i++) {
+      constants.push(Math.floor(2**32*Math.abs(Math.sin(i+1))).toString(16))
+    }
+    console.log(constants[0])
     if (a) {
       for (let i = 0; i < a.length; i++) {
-        document.querySelector("h1.test").textContent+=
+        document.querySelector("h1.test").textContent+="A"
       }
     }
     else {
