@@ -126,9 +126,9 @@
           g=(7*(i%64))%16
         }
         g=g+(16*Math.floor(i,64))
-        a1=(a1+Number(final2[g],16))%2**32
+        a1=(a1+parseInt(final2[g],16))%2**32
         a1=(a1+f)%2**32
-        a1=(a1+Number(constants[i%64],16))%2**32
+        a1=(a1+parseInt(constants[i%64],16))%2**32
         a1=a1.toString(2)
         while (a1.length != 32) {
           a1="0"+a1
