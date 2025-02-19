@@ -14,6 +14,7 @@
       let a = document.getElementById("toMD5").value
       let chars = []
       let constants = []
+      let tbl = []
       for (let i = 0; i < 64; i++) {
         constants.push(Math.floor(2**32*Math.abs(Math.sin(i+1))).toString(16))
       }
@@ -25,7 +26,7 @@
         while (chars.length % 64 != 56) {
           chars.push("00")
         }
-        console.log(chars)
+        tbl.push(a.length*8)
         let h1 = document.querySelector("h2.test")
         h1.textContent = a
       }
