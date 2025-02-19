@@ -134,7 +134,7 @@
           a1="0"+a1
         }
         a1 = "0b"+a1
-        a1 = a1 << shift[i%64]
+        a1 = a1.slice(2,2+shift[i%64])+a1.slice(2+shift[i%64],a1.length-1)
         console.log(a1)
       }
       let h1 = document.querySelector("h2.test")
