@@ -192,7 +192,7 @@
       console.log(md5list)
       let md5 = ''
       for (let j = 0; j < 16; j+=4) {
-        md5+=md5list[j].split("").reverse().join("").toUpperCase()
+        md5+=md5list.splice(0,j).reverse().join("").toUpperCase()
       }
       let h1 = document.querySelector("h2.test")
       h1.textContent = md5
